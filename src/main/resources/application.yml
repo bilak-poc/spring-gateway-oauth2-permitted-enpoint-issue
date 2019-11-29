@@ -1,6 +1,13 @@
 spring:
   application:
     name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: authorization-service
+          uri: 'http://localhost:9999'
+          predicates:
+            - Path=/auth/**
   security:
     oauth2:
       resourceserver:
