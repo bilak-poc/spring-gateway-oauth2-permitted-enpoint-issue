@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9999/auth/realms/master/protocol/openid-connect/certs
